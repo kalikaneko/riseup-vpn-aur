@@ -28,9 +28,8 @@ sha1sums=(
 )
 build() {
     cd "bitmask-vpn"
-    make depends
-    PROVIDER=riseup
-    make build
+    PROVIDER=riseup make prepare
+    PROVIDER=riseup make build
 }
 
 package() {
